@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- displays site properly based on user's device -->
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="responsive.css" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Tip calculator app</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+
+			#html {
+				font-family: "Space Mono", monospace !important;
+			}
+		</style>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<h2 class="page-head">SPLI <br />TTER</h2>
+			<div class="content">
+				<div class="left">
+					<div>
+						<label for="bill" class="bill-label">Bill</label> <br />
+						<div class="bill-input-wrapper">
+							<img
+								src="./images/icon-dollar.svg"
+								alt=""
+								class="dollar-sign-svg"
+							/>
+							<input
+								type="number"
+								id="bill"
+								class="bill-input"
+								placeholder="0"
+							/>
+						</div>
+					</div>
+					<div class="buttons">
+						<p class="tip-text">Select Tip %</p>
+						<div class="top-buttons">
+							<button class="button" value=".05">5%</button>
+							<button class="button" value=".10">10%</button>
+							<button class="button" value=".15">15%</button>
+						</div>
+						<div class="bottom-buttons">
+							<button class="button" value=".25">25%</button>
+							<button class="button" value=".50">50%</button>
+							<input
+								type="number"
+								name="custom"
+								class="custom"
+								placeholder="Custom"
+								max="2"
+							/>
+						</div>
+					</div>
+					<div class="num-of-people-wrapper">
+						<div class="num-of-people-text">
+							<p>Number of People</p>
+							<p class="error-text">Can't be zero</p>
+						</div>
+
+						<div class="num-of-people-input-wrapper">
+							<img src="./images/icon-person.svg" alt="" />
+							<input
+								type="number"
+								name="number-of-people"
+								id=""
+								class="num-of-people-input"
+								placeholder="0"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<div class="right-wrapper">
+						<div class="sub-left">
+							<div class="tip-amount-wrapper">
+								<h4 class="tip-amount-text">Tip Amount</h4>
+								<h5 class="per-person-text">/person</h5>
+							</div>
+							<div class="total-text">
+								<h4 class="total-amount-text">Total</h4>
+								<h5 class="per-person-text">/person</h5>
+							</div>
+						</div>
+						<div class="sub-right">
+							<div class="tip-wrapper">
+								<h2>$<span class="tip">0.00</span></h2>
+							</div>
+							<div class="total-wrapper">
+								<h2>$<span class="total">0.00</span></h2>
+							</div>
+						</div>
+						<div class="reset-button-wrapper">
+							<button class="reset-button" disabled>RESET</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
